@@ -3,10 +3,13 @@
 #include <ctime>
 
 using std::cout;
-int numero, par, impar;
+
 
 int main()
 {
+    
+    int numero = 0, par = 0, impar = 0;
+    
 	cout << "######################################################\n";
 	cout << "######################################################\n\n";
 	
@@ -14,7 +17,10 @@ int main()
 	cout << "N" << char(163) << "meros gerados aleatoriamente: \n";
 	
 	srand( ( int ) time( 0 ) );
-	for ( int i = 0; i < 100; i++ )
+    
+    const int Nint = 100;
+    
+	for ( int i = 0; i < Nint; i++ )
 	
 	{
 		numero = rand() % 10 + 1;
@@ -28,8 +34,8 @@ int main()
 	
 	
 	
-	cout << "\n\n Quantidade de n" << char(163) << "meros pares: "<< par << "; Porcentagem de n" << char(163) << "meros pares: " << par << "%!";
-	cout << "\n\n Quantidade de n" << char(163) << "meros " << char(161) << "mpares: " << impar << "; Procentagem de n" << char(163) << "meros " << char(161) << "mpares: " << impar << "%!";
+	cout << "\n\n Quantidade de n" << char(163) << "meros pares: "<< par << "; Porcentagem de n" << char(163) << "meros pares: " << 100*double(par)/double(Nint) << "%!";
+	cout << "\n\n Quantidade de n" << char(163) << "meros " << char(161) << "mpares: " << impar << "; Procentagem de n" << char(163) << "meros " << char(161) << "mpares: " << 100*double(impar)/double(Nint) << "%!";
 	
 	return 0;
 }
